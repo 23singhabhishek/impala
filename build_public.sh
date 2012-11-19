@@ -54,8 +54,6 @@ echo "******************************"
 # build common and backend
 cd $IMPALA_HOME
 ${IMPALA_HOME}/bin/gen_build_version.py
-THRIFT_HOME=${IMPALA_HOME}/thirdparty/thrift-${IMPALA_THRIFT_VERSION}/build \
-THRIFT_CONTRIB_DIR=${IMPALA_HOME}/thirdparty/thrift-${IMPALA_THRIFT_VERSION}/build \
 cmake -DCMAKE_BUILD_TYPE=$TARGET_BUILD_TYPE ${CMAKE_ARGS:-} .
 cd $IMPALA_HOME/common/function-registry
 make
