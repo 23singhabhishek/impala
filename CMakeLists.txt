@@ -29,7 +29,7 @@ set(Boost_DEBUG TRUE)
 set(Boost_USE_STATIC_LIBS OFF)
 set(Boost_USE_MULTITHREADED ON)
 set(Boost_USE_STATIC_RUNTIME OFF)
-find_package(Boost REQUIRED COMPONENTS thread regex-mt)
+find_package(Boost REQUIRED COMPONENTS thread regex-mt date_time)
 include_directories(${Boost_INCLUDE_DIRS})
 set(LIBS ${LIBS} ${Boost_LIBRARIES})
 message(STATUS ${Boost_INCLUDE_DIRS})
@@ -136,7 +136,7 @@ add_subdirectory(common/thrift)
 add_subdirectory(be)
 
 # Run FE and BE tests
-add_custom_target(testall 
+add_custom_target(testall
   COMMAND ${CMAKE_COMMAND} -E chdir ${CMAKE_SOURCE_DIR}/fe mvn test
   COMMAND ${CMAKE_SOURCE_DIR}/bin/runbackendtests.sh
 )
