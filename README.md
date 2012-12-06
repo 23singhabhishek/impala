@@ -30,7 +30,7 @@ The rest of this README describes how to build Cloudera Impala from this reposit
 ## Prerequisites on Ubuntu 12.04 and newer
 
     sudo apt-get install unzip build-essential autoconf git libboost1.48-all-dev libevent-dev \
-                         libbz2-dev cmake llvm-3.1 clang doxygen
+                         libbz2-dev cmake llvm-3.0 clang doxygen
 
 ## Other prerequisites
 
@@ -105,7 +105,7 @@ On CentOS:
 On Ubuntu:
 
     cd ${IMPALA_HOME}
-    CMAKE_ARGS="-DLLVM_CONFIG_EXECUTABLE=`which llvm-config-3.1` -DLLVM_OPT_EXECUTABLE=`which opt-3.1` -DCLANG_EXECUTABLE=`which clang` -DLLVM_CLANG_EXECUTABLE=`which clang`" \
+    CMAKE_ARGS="-DLLVM_CONFIG_EXECUTABLE=`which llvm-config-3.0` -DLLVM_OPT_EXECUTABLE=`which opt-3.0` -DCLANG_EXECUTABLE=`which clang` -DLLVM_CLANG_EXECUTABLE=`which clang`" \
     THRIFT_HOME=${IMPALA_HOME}/thirdparty/thrift-${IMPALA_THRIFT_VERSION}/build \
     THRIFT_CONTRIB_DIR=${IMPALA_HOME}/thirdparty/thrift-${IMPALA_THRIFT_VERSION}/build \
     ./build_public.sh -build_thirdparty
