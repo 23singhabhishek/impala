@@ -21,6 +21,8 @@ enable_testing()
 # where to find cmake modules
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake_modules")
 
+set(CMAKE_CPP_FLAGS "${CMAKE_CPP_FLAGS} ---no-as-needed")
+
 # find boost headers and libs
 set(Boost_DEBUG TRUE)
 # in order to load libbackend.so into the jvm, we need to link against a shared
