@@ -97,17 +97,7 @@ The output should be:
 
 ### Build Impala
 
-On CentOS:
-
     cd ${IMPALA_HOME}
-    ./build_public.sh -build_thirdparty
-
-On Ubuntu:
-
-    cd ${IMPALA_HOME}
-    CMAKE_ARGS="-DLLVM_CONFIG_EXECUTABLE=`which llvm-config-3.0` -DLLVM_OPT_EXECUTABLE=`which opt-3.0` -DCLANG_EXECUTABLE=`which clang` -DLLVM_CLANG_EXECUTABLE=`which clang`" \
-    THRIFT_HOME=${IMPALA_HOME}/thirdparty/thrift-${IMPALA_THRIFT_VERSION}/build \
-    THRIFT_CONTRIB_DIR=${IMPALA_HOME}/thirdparty/thrift-${IMPALA_THRIFT_VERSION}/build \
     ./build_public.sh -build_thirdparty
 
 ## Wrapping up
